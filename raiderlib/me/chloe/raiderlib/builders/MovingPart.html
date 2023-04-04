@@ -131,15 +131,15 @@ loadScripts(document, 'script');</script>
 <div class="block">Add a motor to the part's list of motors</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addState(java.lang.String,me.chloe.raiderlib.motor.MotorSimple.MotorSimpleState...)" class="member-name-link">addState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName,
- <a href="../motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a>...&nbsp;motorSimpleStates)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addMotors(me.chloe.raiderlib.builders.MotorControllerSimple...)" class="member-name-link">addMotors</a><wbr>(<a href="MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>...&nbsp;ms)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Add a state in the builder</div>
+<div class="block">Add an Array of motors to the part's list of motors</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changeToState(java.lang.String)" class="member-name-link">changeToState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addState(java.lang.String,me.chloe.raiderlib.motor.MotorSimple.MotorSimpleState...)" class="member-name-link">addState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName,
+ <a href="../motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a>...&nbsp;motorSimpleStates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Change the MovingPart to a state created in the builder.</div>
+<div class="block">Add states in the builder</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDesc()" class="member-name-link">getDesc</a>()</code></div>
@@ -172,6 +172,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The super constructor is called for the implementation of PID Exports and MovingPart states.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setState(java.lang.String)" class="member-name-link">setState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Change the MovingPart to a state created in the builder.</div>
+</div>
 </div>
 </div>
 </div>
@@ -194,7 +199,58 @@ loadScripts(document, 'script');</script>
 <h3>MovingPart</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MovingPart</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pseudoName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;desc)</span></div>
-<div class="block">Constructor for creating a basic Moving Part.</div>
+<div class="block">Constructor for creating a basic Moving Part.
+ <p>Code example</p>
+ <pre>
+ <code>
+ public class ArmExample extends MovingPart {
+      MotorControllerSimple shoulder = new MotorControllerSimple(CommonControllers.SPARK_MAX
+          21, true, "shoulder_export",
+          0.1, false, 1.0,
+          true);
+      MotorControllerSimple telescope = new MotorControllerSimple(CommonControllers.SPARK_MAX
+          22, true, "telescope_export",
+          0.1, false, 1.0,
+          false);
+      MotorControllerSimple claw = new MotorControllerSimple(CommonControllers.SPARK_MAX
+          23, true, "claw_export",
+          1, false, 1.0,
+          false);
+      public ArmExample() {
+          super("Arm", "Arm that results in manipulation of cubes and cones.")
+          this.addMotors(shoulder, telescope, claw)
+          this.addState("stop", 
+              new MotorSimpleState(shoulder), 0.0d),
+              new MotorSimpleState(telescope), 0.0d, false),
+              new MotorSimpleState(claw), 0.0d, false));
+          this.addState("intake", new MotorSimpleState(claw, 0.375d, false));
+          this.addState("outtake", new MotorSimpleState(claw, -0.5d, false));
+          this.addState("shoulderhigh", new MotorSimpleState(shoulder, 2852d));
+          this.addState("telescopehigh", new MotorSimpleState(telescope, 4182d));
+      }
+ 
+      @Override
+      public void periodic() {
+          super.periodic();
+          SmartDashboard.putData("Export shoulder", Commands.sequence(shoulder.getMotor().exportPIDData()));
+          SmartDashboard.putData("Export telescope", Commands.sequence(telescope.getMotor().exportPIDData()));
+      }
+      
+      // Very basic Autonomous, it is recommended that this is implemented with a Command-based structural approach.
+      // This is somewhat bad practice.
+      @Override
+      public void onAutoInit() {
+          this.setState("shoulderhigh");
+          Commands.waitSeconds(1d);
+          this.setState("telescopehigh");
+          Commands.waitSeconds(0.75d);
+          this.setState("outtake");
+          Commands.waitSeconds(0.125d);
+          this.setState("stop");
+      }
+ }
+ </code>
+ </pre></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pseudoName</code> - - Readable name of part.</dd>
@@ -259,24 +315,37 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="addMotors(me.chloe.raiderlib.builders.MotorControllerSimple...)">
+<h3>addMotors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></span>&nbsp;<span class="element-name">addMotors</span><wbr><span class="parameters">(<a href="MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>...&nbsp;ms)</span></div>
+<div class="block">Add an Array of motors to the part's list of motors</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>ms</code> - Array of MotorControllerSimple separated by commas</dd>
+<dt>Returns:</dt>
+<dd>this (MovingPart) to be used as a builder.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="addState(java.lang.String,me.chloe.raiderlib.motor.MotorSimple.MotorSimpleState...)">
 <h3>addState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></span>&nbsp;<span class="element-name">addState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName,
  <a href="../motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a>...&nbsp;motorSimpleStates)</span></div>
-<div class="block">Add a state in the builder</div>
+<div class="block">Add states in the builder</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stateName</code> - Name of state</dd>
-<dd><code>motorSimpleStates</code> - List of MotorSimpleStates separated by commas</dd>
+<dd><code>motorSimpleStates</code> - Array of MotorSimpleStates separated by commas</dd>
 <dt>Returns:</dt>
 <dd>this (MovingPart) to be used as builder.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="changeToState(java.lang.String)">
-<h3>changeToState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">changeToState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName)</span></div>
+<section class="detail" id="setState(java.lang.String)">
+<h3>setState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateName)</span></div>
 <div class="block">Change the MovingPart to a state created in the builder.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

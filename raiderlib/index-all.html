@@ -56,6 +56,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Add a motor to the part's list of motors</div>
 </dd>
+<dt><a href="me/chloe/raiderlib/builders/MovingPart.html#addMotors(me.chloe.raiderlib.builders.MotorControllerSimple...)" class="member-name-link">addMotors(MotorControllerSimple...)</a> - Method in class me.chloe.raiderlib.builders.<a href="me/chloe/raiderlib/builders/MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></dt>
+<dd>
+<div class="block">Add an Array of motors to the part's list of motors</div>
+</dd>
 <dt><a href="me/chloe/raiderlib/RaiderLib.html#addPart(me.chloe.raiderlib.builders.MovingPart)" class="member-name-link">addPart(MovingPart)</a> - Method in class me.chloe.raiderlib.<a href="me/chloe/raiderlib/RaiderLib.html" title="class in me.chloe.raiderlib">RaiderLib</a></dt>
 <dd>
 <div class="block">Add a MovingPart to the RaiderLib Subsystem that will be ran periodically.</div>
@@ -64,7 +68,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="me/chloe/raiderlib/builders/MovingPart.html#addState(java.lang.String,me.chloe.raiderlib.motor.MotorSimple.MotorSimpleState...)" class="member-name-link">addState(String, MotorSimple.MotorSimpleState...)</a> - Method in class me.chloe.raiderlib.builders.<a href="me/chloe/raiderlib/builders/MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></dt>
 <dd>
-<div class="block">Add a state in the builder</div>
+<div class="block">Add states in the builder</div>
 </dd>
 <dt><a href="me/chloe/raiderlib/drive/DriveSystem.html#angleToRotationSpeed(double,boolean)" class="member-name-link">angleToRotationSpeed(double, boolean)</a> - Method in class me.chloe.raiderlib.drive.<a href="me/chloe/raiderlib/drive/DriveSystem.html" title="class in me.chloe.raiderlib.drive">DriveSystem</a></dt>
 <dd>
@@ -84,10 +88,6 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
-<dt><a href="me/chloe/raiderlib/builders/MovingPart.html#changeToState(java.lang.String)" class="member-name-link">changeToState(String)</a> - Method in class me.chloe.raiderlib.builders.<a href="me/chloe/raiderlib/builders/MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></dt>
-<dd>
-<div class="block">Change the MovingPart to a state created in the builder.</div>
-</dd>
 <dt><a href="me/chloe/raiderlib/motor/CommonControllers.html" class="type-name-link" title="enum class in me.chloe.raiderlib.motor">CommonControllers</a> - Enum Class in <a href="me/chloe/raiderlib/motor/package-summary.html">me.chloe.raiderlib.motor</a></dt>
 <dd>
 <div class="block">Common Motor Controllers I have seen since joining Raider Robotics (2022-Present)</div>
@@ -514,9 +514,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">State's positon</div>
 </dd>
-<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#getStateVelocity()" class="member-name-link">getStateVelocity()</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
+<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#getStateSpeed()" class="member-name-link">getStateSpeed()</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
 <dd>
-<div class="block">State's velocity</div>
+<div class="block">State's speed</div>
 </dd>
 <dt><a href="me/chloe/raiderlib/builders/drivesystems/SwerveDriveSystem.html#getSwerveModulePositions()" class="member-name-link">getSwerveModulePositions()</a> - Method in class me.chloe.raiderlib.builders.drivesystems.<a href="me/chloe/raiderlib/builders/drivesystems/SwerveDriveSystem.html" title="class in me.chloe.raiderlib.builders.drivesystems">SwerveDriveSystem</a></dt>
 <dd>
@@ -681,11 +681,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double)" class="member-name-link">MotorSimpleState(MotorControllerSimple, double)</a> - Constructor for class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
 <dd>
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+<div class="block">Create a MotorSimpleState to correlate specific positions by MotorControllerSimple</div>
 </dd>
-<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double,double)" class="member-name-link">MotorSimpleState(MotorControllerSimple, double, double)</a> - Constructor for class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
+<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double,boolean)" class="member-name-link">MotorSimpleState(MotorControllerSimple, double, boolean)</a> - Constructor for class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
 <dd>
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+<div class="block">Create a MotorSimpleState to correlate specific speeds by MotorControllerSimple</div>
 </dd>
 <dt><a href="me/chloe/raiderlib/builders/MovingPart.html" class="type-name-link" title="class in me.chloe.raiderlib.builders">MovingPart</a> - Class in <a href="me/chloe/raiderlib/builders/package-summary.html">me.chloe.raiderlib.builders</a></dt>
 <dd>
@@ -942,9 +942,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Set state postion</div>
 </dd>
-<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#setCurrentVelocity(double)" class="member-name-link">setCurrentVelocity(double)</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
+<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#setCurrentSpeed(double)" class="member-name-link">setCurrentSpeed(double)</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
 <dd>
-<div class="block">Set state velocity</div>
+<div class="block">Set state speed</div>
 </dd>
 <dt><a href="me/chloe/raiderlib/drive/DriveSystem.html#setDriveMode(me.chloe.raiderlib.drive.DriveSystem.DriveMode)" class="member-name-link">setDriveMode(DriveSystem.DriveMode)</a> - Method in class me.chloe.raiderlib.drive.<a href="me/chloe/raiderlib/drive/DriveSystem.html" title="class in me.chloe.raiderlib.drive">DriveSystem</a></dt>
 <dd>
@@ -1106,6 +1106,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="me/chloe/raiderlib/drive/SwerveModule.html#setRotationMotorPosition(double)" class="member-name-link">setRotationMotorPosition(double)</a> - Method in class me.chloe.raiderlib.drive.<a href="me/chloe/raiderlib/drive/SwerveModule.html" title="class in me.chloe.raiderlib.drive">SwerveModule</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="me/chloe/raiderlib/builders/MovingPart.html#setState(java.lang.String)" class="member-name-link">setState(String)</a> - Method in class me.chloe.raiderlib.builders.<a href="me/chloe/raiderlib/builders/MovingPart.html" title="class in me.chloe.raiderlib.builders">MovingPart</a></dt>
+<dd>
+<div class="block">Change the MovingPart to a state created in the builder.</div>
+</dd>
 <dt><a href="me/chloe/raiderlib/motor/MotorSimple.html#setState(me.chloe.raiderlib.motor.MotorSimple.MotorSimpleState)" class="member-name-link">setState(MotorSimple.MotorSimpleState)</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.html" title="class in me.chloe.raiderlib.motor">MotorSimple</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="me/chloe/raiderlib/motor/MotorSimple.html#setVelocityCommand(double)" class="member-name-link">setVelocityCommand(double)</a> - Method in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.html" title="class in me.chloe.raiderlib.motor">MotorSimple</a></dt>
@@ -1255,6 +1259,8 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="me/chloe/raiderlib/drive/DriveSystem.DriveExportMode.html#VELOCITY" class="member-name-link">VELOCITY</a> - Enum constant in enum class me.chloe.raiderlib.drive.<a href="me/chloe/raiderlib/drive/DriveSystem.DriveExportMode.html" title="enum class in me.chloe.raiderlib.drive">DriveSystem.DriveExportMode</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html#velocityControl" class="member-name-link">velocityControl</a> - Variable in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.MotorSimpleState.html" title="class in me.chloe.raiderlib.motor">MotorSimple.MotorSimpleState</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="me/chloe/raiderlib/motor/MotorSimple.html#velocityControl" class="member-name-link">velocityControl</a> - Variable in class me.chloe.raiderlib.motor.<a href="me/chloe/raiderlib/motor/MotorSimple.html" title="class in me.chloe.raiderlib.motor">MotorSimple</a></dt>
 <dd>&nbsp;</dd>

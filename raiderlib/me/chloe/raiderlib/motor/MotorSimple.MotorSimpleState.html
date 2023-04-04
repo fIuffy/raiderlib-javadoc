@@ -44,13 +44,13 @@ loadScripts(document, 'script');</script>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -84,6 +84,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>boolean</code></div>
+<div class="col-second even-row-color"><code><a href="#velocityControl" class="member-name-link">velocityControl</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -93,15 +108,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double)" class="member-name-link">MotorSimpleState</a><wbr>(<a href="../builders/MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>&nbsp;motorControllerSimple,
- double&nbsp;stateVelocity)</code></div>
+ double&nbsp;statePosition)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+<div class="block">Create a MotorSimpleState to correlate specific positions by MotorControllerSimple</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double,double)" class="member-name-link">MotorSimpleState</a><wbr>(<a href="../builders/MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>&nbsp;motorControllerSimple,
- double&nbsp;statePosition,
- double&nbsp;stateVelocity)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(me.chloe.raiderlib.builders.MotorControllerSimple,double,boolean)" class="member-name-link">MotorSimpleState</a><wbr>(<a href="../builders/MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>&nbsp;motorControllerSimple,
+ double&nbsp;stateSpeed,
+ boolean&nbsp;velocityControl)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+<div class="block">Create a MotorSimpleState to correlate specific speeds by MotorControllerSimple</div>
 </div>
 </div>
 </section>
@@ -126,9 +141,9 @@ loadScripts(document, 'script');</script>
 <div class="block">State's positon</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStateVelocity()" class="member-name-link">getStateVelocity</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStateSpeed()" class="member-name-link">getStateSpeed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">State's velocity</div>
+<div class="block">State's speed</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
@@ -136,9 +151,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Set state postion</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentVelocity(double)" class="member-name-link">setCurrentVelocity</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentSpeed(double)" class="member-name-link">setCurrentSpeed</a><wbr>(double&nbsp;speed)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set state velocity</div>
+<div class="block">Set state speed</div>
 </div>
 </div>
 </div>
@@ -152,36 +167,50 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="velocityControl">
+<h3>velocityControl</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">velocityControl</span></div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(me.chloe.raiderlib.builders.MotorControllerSimple,double)">
+<section class="detail" id="&lt;init&gt;(me.chloe.raiderlib.builders.MotorControllerSimple,double,boolean)">
 <h3>MotorSimpleState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorSimpleState</span><wbr><span class="parameters">(<a href="../builders/MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>&nbsp;motorControllerSimple,
- double&nbsp;stateVelocity)</span></div>
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+ double&nbsp;stateSpeed,
+ boolean&nbsp;velocityControl)</span></div>
+<div class="block">Create a MotorSimpleState to correlate specific speeds by MotorControllerSimple</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>motorControllerSimple</code> - MotorControllerSimple of motor</dd>
-<dd><code>stateVelocity</code> - double</dd>
+<dd><code>stateSpeed</code> - double</dd>
+<dd><code>velocityControl</code> - When updating states, if true, sets by velocity, if false, sets by ControlPercent</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(me.chloe.raiderlib.builders.MotorControllerSimple,double,double)">
+<section class="detail" id="&lt;init&gt;(me.chloe.raiderlib.builders.MotorControllerSimple,double)">
 <h3>MotorSimpleState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorSimpleState</span><wbr><span class="parameters">(<a href="../builders/MotorControllerSimple.html" title="class in me.chloe.raiderlib.builders">MotorControllerSimple</a>&nbsp;motorControllerSimple,
- double&nbsp;statePosition,
- double&nbsp;stateVelocity)</span></div>
-<div class="block">Create a MotorSimpleState to correlate specific positions and velocities by MotorControllerSimple</div>
+ double&nbsp;statePosition)</span></div>
+<div class="block">Create a MotorSimpleState to correlate specific positions by MotorControllerSimple</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>motorControllerSimple</code> - MotorControllerSimple of motor</dd>
 <dd><code>statePosition</code> - double</dd>
-<dd><code>stateVelocity</code> - double</dd>
 </dl>
 </section>
 </li>
@@ -215,10 +244,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getStateVelocity()">
-<h3>getStateVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getStateVelocity</span>()</div>
-<div class="block">State's velocity</div>
+<section class="detail" id="getStateSpeed()">
+<h3>getStateSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getStateSpeed</span>()</div>
+<div class="block">State's speed</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>double</dd>
@@ -237,13 +266,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setCurrentVelocity(double)">
-<h3>setCurrentVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentVelocity</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
-<div class="block">Set state velocity</div>
+<section class="detail" id="setCurrentSpeed(double)">
+<h3>setCurrentSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentSpeed</span><wbr><span class="parameters">(double&nbsp;speed)</span></div>
+<div class="block">Set state speed</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>velocity</code> - double</dd>
+<dd><code>speed</code> - double</dd>
 </dl>
 </section>
 </li>
