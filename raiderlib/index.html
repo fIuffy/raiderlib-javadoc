@@ -140,9 +140,9 @@ public class ArmExample extends MovingPart {
 	   super("Arm", "Arm that results in manipulation of cubes and cones.")
 	   this.addMotors(shoulder, telescope, claw)
 	   this.addState("stop", 
-		   new MotorSimpleState(shoulder), 0.0d),
-		   new MotorSimpleState(telescope), 0.0d, false),
-		   new MotorSimpleState(claw), 0.0d, false));
+		   new MotorSimpleState(shoulder, 0.0d),
+		   new MotorSimpleState(telescope, 0.0d, false),
+		   new MotorSimpleState(claw, 0.0d, false));
 	   this.addState("intake", new MotorSimpleState(claw, 0.375d, false));
 	   this.addState("outtake", new MotorSimpleState(claw, -0.5d, false));
 	   this.addState("shoulderhigh", new MotorSimpleState(shoulder, 2852d));
